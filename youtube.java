@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import practice.pattern;
-
 class Display{
     public static void main(String[] args) {
         Youtube dp =new Youtube();
@@ -80,6 +78,7 @@ class Youtube {
         int b = scanner.nextInt();
         int c = a+b;
         System.out.println("Sum of first and second number: "+c);
+        scanner.close();
     }
 
 
@@ -94,6 +93,7 @@ class Youtube {
         System.out.println("..........................");
         System.out.println("         Result");
         System.out.println("..........................");
+        scanner.close();
 
 
         int and = first & second;
@@ -161,19 +161,20 @@ class Youtube {
 
         // System.out.println();
 
-        System.out.println("Welcome to Sum of The Digits of Integer");
-        System.out.print("Enter your number: ");
-        int a = scanner.nextInt();
-        System.out.println("..........................");
-        sumOfTheDigits(a);
-
-        // System.out.println("Find The Least Common Multiple (LCM) of Two Number");
-        // System.out.print("Enter your two number: ");
-        // int num1= scanner.nextInt();
-        // System.out.println(" & ");
-        // int num2 =scanner.nextInt()
+        // System.out.println("Welcome to Sum of The Digits of Integer");
+        // System.out.print("Enter your number: ");
+        // int a = scanner.nextInt();
         // System.out.println("..........................");
-        
+        // sumOfTheDigits(a);
+
+        System.out.println("Find The Least Common Multiple (LCM) of Two Number");
+        System.out.print("Enter your number: ");
+        int num1= scanner.nextInt();
+        System.out.print("Enter your number: ");
+        int num2 =scanner.nextInt();
+        System.out.println("..........................");
+        findTwoNumberLCM(num1, num2);
+        scanner.close();
     }
 
 
@@ -230,7 +231,30 @@ class Youtube {
         return ans;
     }
 
-    public void findTwoNumberLCM(){
-        System.out.println("First try from java");
+    public int findTwoNumberLCM(int num1, int num2){
+        int i = 1;
+        while (i<=num2) {
+            int mult1 = num1*i;
+            for(int j =1; j<num2; j++)
+            {
+                int mult2 = num2*j;
+                if(mult1==mult2){
+                    System.out.println("Common multiplication value of the two number is "+mult1);
+                }
+            }
+            i++;
+        }
+        System.out.println("..........................");
+        int k = 1;
+        while(true)
+        {
+            int lcm = num1*k;
+            if(lcm%num2==0)
+            {
+                System.out.println("LCM of two number is "+lcm);
+                return lcm;
+            }
+            k++;
+        }
     }
 }
