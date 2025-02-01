@@ -167,13 +167,15 @@ class Youtube {
         // System.out.println("..........................");
         // sumOfTheDigits(a);
 
-        System.out.println("Find The Least Common Multiple (LCM) of Two Number");
+        System.out.println("Find The Least Common Multiple (LCM) and Greatest Common Divisor (GCD) of Two Number");
         System.out.print("Enter your number: ");
         int num1= scanner.nextInt();
         System.out.print("Enter your number: ");
         int num2 =scanner.nextInt();
         System.out.println("..........................");
         findTwoNumberLCM(num1, num2);
+        System.out.println("..........................");
+        findTwoNumberGCD(num1, num2);
         scanner.close();
     }
 
@@ -231,13 +233,14 @@ class Youtube {
         return ans;
     }
 
+
     public int findTwoNumberLCM(int num1, int num2){
         int i = 1;
         while (i<=num2) {
-            int mult1 = num1*i;
-            for(int j =1; j<num2; j++)
+            long mult1 = num1*i;
+            for(int j =1; j<=num2; j++)
             {
-                int mult2 = num2*j;
+                long mult2 = num2*j;
                 if(mult1==mult2){
                     System.out.println("Common multiplication value of the two number is "+mult1);
                 }
@@ -257,4 +260,34 @@ class Youtube {
             k++;
         }
     }
+
+    public int findTwoNumberGCD(int num1, int num2){
+        int i = 1;
+        while (i<=num2) {
+            if(num1%i==0)
+            {
+                for(int j =1; j<=num2; j++)
+                {
+                    if(num2%j==0 && j==i){
+                        System.out.println("Common divisor value of the two number is "+i);
+                    }
+                }
+            }
+            i++;
+        }
+        System.out.println("..........................");
+        int k = 1;
+        int gcd = 1;
+        while(k<=num2)
+        {
+            if(num1%k==0 && num2%k==0)
+            {
+                gcd = k;
+            }
+            k++;
+        }
+        System.out.println("GCD of two number is "+gcd);
+        return gcd;
+    }
+
 }
