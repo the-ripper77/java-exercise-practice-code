@@ -135,37 +135,39 @@ class Youtube {
 
     void youtubeFuctionExcersice(){
         Scanner scanner = new Scanner(System.in);
-        // System.out.println("Welcome to Mutiplication Dimension");
-        // System.out.print("Enter your number: ");
-        // int num = scanner.nextInt();
-        // System.out.print("Multiplication Table From 1 to ");
-        // int tok = scanner.nextInt();
-        // System.out.println("..........................");
-        // multiplicationCalculation(num, tok);
+        System.out.println("Welcome to Mutiplication Dimension");
+        System.out.print("Enter your number: ");
+        int num = scanner.nextInt();
+        System.out.print("Multiplication Table From 1 to ");
+        int tok = scanner.nextInt();
+        System.out.println("..........................");
+        multiplicationCalculation(num, tok);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("Welcome to Addition of All Odd Number");
-        // System.out.print("From 1 to ");
-        // int opp = scanner.nextInt();
-        // System.out.println("..........................");
-        // sumOfOddNumber(opp);
+        System.out.println("Welcome to Addition of All Odd Number");
+        System.out.print("From 1 to ");
+        int opp = scanner.nextInt();
+        System.out.println("..........................");
+        sumOfOddNumber(opp);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("Welcome to Factorial Dimension");
-        // System.out.print("Enter your factorial number: ");
-        // int fact = scanner.nextInt();
-        // System.out.println("..........................");
-        // factorialNumber(fact);
+        System.out.println("Welcome to Factorial Dimension");
+        System.out.print("Enter your factorial number: ");
+        int fact = scanner.nextInt();
+        System.out.println("..........................");
+        factorialNumber(fact);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("Welcome to Sum of The Digits of Integer");
-        // System.out.print("Enter your number: ");
-        // int a = scanner.nextInt();
-        // System.out.println("..........................");
-        // sumOfTheDigits(a);
+        System.out.println("Welcome to Sum of The Digits of Integer");
+        System.out.print("Enter your number: ");
+        int a = scanner.nextInt();
+        System.out.println("..........................");
+        sumOfTheDigits(a);
+
+        System.out.println();
 
         System.out.println("Find The Least Common Multiple (LCM) and Greatest Common Divisor (GCD) of Two Number");
         System.out.print("Enter your number: ");
@@ -176,9 +178,71 @@ class Youtube {
         findTwoNumberLCM(num1, num2);
         System.out.println("..........................");
         findTwoNumberGCD(num1, num2);
-        scanner.close();
-    }
 
+        System.out.println();
+
+        System.out.println("Welcome to Prime Number Checker");//if number is not divisor by any other number except 1 and itself
+        System.out.print("Enter your number: ");
+        int ops = scanner.nextInt();
+        System.out.println("..........................");
+        boolean ifPrime = ifPrime(ops);
+        if(ifPrime){
+            System.out.println("Your number " + ops + " is prime");
+        }
+        else{
+            System.out.println("Your number " + ops + " is not prime");
+        }
+
+        System.out.println();
+
+        System.out.println("Welcome to Reverse the Digits Number");
+        System.out.print("Enter your number: ");
+        int nun = scanner.nextInt();
+        System.out.println("..........................");
+        int Reverse = reverTheDigit(nun);
+        System.out.println("The Reverse Digit of " + nun + " is " + Reverse);
+
+        System.out.println();
+
+        System.out.println("Welcome to Fibonacci Series");
+        System.out.print("Enter your number: ");
+        int num3 = scanner.nextInt();
+        System.out.println("Here are the Fibonacci Series");
+        System.out.println("..........................");
+        fibonacciSeries(num3);
+
+        System.out.println();
+
+        System.out.println("Welcome to Pallindrom Number checker");
+        System.out.print("Enter your number: ");
+        int pallin = scanner.nextInt();
+        System.out.println("..........................");
+        int ifPallindrom = ifPallindrom(pallin);
+        if(ifPallindrom == pallin)
+        {
+            System.out.println("Your number " + pallin + " is Pallindrom");   
+        }
+        else{
+            System.out.println("Your number " + pallin + " is not Pallindrom");   
+        }
+
+        System.out.println();
+
+        System.out.println("Welcome to Armstrong Number checker");
+        System.out.print("Enter your number: ");
+        int arm = scanner.nextInt();
+        System.out.println("..........................");
+        boolean ifArmstrong = ifArmstrong(arm);
+        if(ifArmstrong)
+        {
+            System.out.println("Your number " + arm + " is Armstrong");   
+        }
+        else{
+            System.out.println("Your number " + arm + " is not Armstrong");   
+        }
+
+        System.out.println();
+    }
 
     // Static method
     public static void multiplicationCalculation(int num, int tok){
@@ -261,6 +325,7 @@ class Youtube {
         }
     }
 
+
     public int findTwoNumberGCD(int num1, int num2){
         int i = 1;
         while (i<=num2) {
@@ -290,4 +355,70 @@ class Youtube {
         return gcd;
     }
 
+
+    public static boolean ifPrime(int ops){
+        for(int i = 2; i<ops; i++){
+            if(ops%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int reverTheDigit(int nun){
+        int ans = 0;
+        while(nun != 0){
+            int digit= nun%10;
+            ans = ans*10 + digit;
+            nun = nun/10;
+        }
+        return ans;
+    }
+
+    public static void fibonacciSeries(int num3){
+        if(num3<=0){
+            System.out.println("# Your number is below '0'");
+            return;
+        }
+        System.out.print(" 0");
+        System.out.print(" 1");
+        int first = 0; int second =1;
+        while (first+second<=num3) {
+            int thrid = first +second;
+            System.out.print(" " + thrid);
+            first=second;
+            second=thrid;
+        }
+        System.out.println();
+    }
+
+    public static int ifPallindrom(int pallin){
+        int sum = 0;
+        while (pallin!=0) {
+            int mod = pallin % 10;
+            sum = sum *10 + mod;
+            pallin /= 10;
+        }
+        return sum;
+    }
+
+    public static boolean ifArmstrong(int arm){
+        int armcopy =arm;
+        int digit = noOfDigits(arm);
+        int finalNumber = 0;
+        while (arm!=0) {
+            int mod = arm % 10;
+            arm /= 10;
+            finalNumber += (int) Math.pow(mod,digit);
+        }
+        return finalNumber== armcopy;
+    }
+    public static int noOfDigits(int arm){
+        int digits=0;
+        while(arm !=0){
+            digits++;
+            arm /= 10;
+        }
+        return digits;
+    }
 }
