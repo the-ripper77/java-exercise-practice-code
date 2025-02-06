@@ -3,70 +3,15 @@ import java.util.Scanner;
 class Display{
     public static void main(String[] args) {
         Youtube dp =new Youtube();
-        // dp.pattern1();
-        // dp.pattern3();
-        // dp.inputUserData();
-        // dp.bitwiseCalculation();
+        dp.inputUserData();
+        dp.bitwiseCalculation();
         dp.youtubeFuctionExcersice();
     }
 }
 
 class Youtube {
-    void pattern1 ()
-    {
-        System.out.println("Patter 1:\n");
-        for(int i = 1; i<=5; i++)
-        {
-            for(int j = i; j>=1; j--)
-            {
-                System.out.print(" *");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-    }
-
-
-    void pattern2 ()
-    {
-        System.out.println("Pattern 2:\n");
-        for (int i = 1; i<=5; i++)
-        {
-            for(int j = i; j<=5; j++)
-            {
-                System.out.print(" *");
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
-
-
-    void pattern3 ()
-    {
-        System.out.println("Pattern 3:\n");
-        for (int i = 1; i<=5; i++)
-        {
-            for(int j = i; j<=5; j++)
-            {
-                System.out.print("  ");
-                if (j==5)
-                {
-                    for (int k = i; k>=1; k--)
-                    {
-                        System.out.print(" *");
-                    }
-                    System.out.println("");
-                }
-            }
-        }
-        System.out.println();
-    }
-
-
     void inputUserData (){
-        System.out.println("\nIntrodution");
+        System.out.println("Introdution");
         System.out.print("Please enter your name: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
@@ -78,12 +23,11 @@ class Youtube {
         int b = scanner.nextInt();
         int c = a+b;
         System.out.println("Sum of first and second number: "+c);
-        scanner.close();
     }
 
 
     void bitwiseCalculation() {
-        System.out.println("Showcasing Bitwise Operator");
+        System.out.println("\n\nShowcasing Bitwise Operator");
         System.out.println("..........................");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your first number: ");
@@ -93,7 +37,6 @@ class Youtube {
         System.out.println("..........................");
         System.out.println("         Result");
         System.out.println("..........................");
-        scanner.close();
 
 
         int and = first & second;
@@ -130,12 +73,15 @@ class Youtube {
         else {
             System.out.println("Both number "+first +" and " +second+" is Odd number");
         }
+
+
+
     }
 
 
     void youtubeFuctionExcersice(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to Mutiplication Dimension");
+        System.out.println("\n\nWelcome to Mutiplication Dimension");
         System.out.print("Enter your number: ");
         int num = scanner.nextInt();
         System.out.print("Multiplication Table From 1 to ");
@@ -242,6 +188,17 @@ class Youtube {
         }
 
         System.out.println();
+
+        System.out.println("Here are the patterns");
+        System.out.println("..........................");
+        pattern1();
+        System.out.println("..........................");
+        pattern2();
+        System.out.println("..........................");
+        pattern3();
+
+
+        scanner.close();
     }
 
     // Static method
@@ -420,5 +377,54 @@ class Youtube {
             arm /= 10;
         }
         return digits;
+    }
+
+
+    public static void pattern1 ()
+    {
+        System.out.println("Patter 1:\n");
+        for(int i = 1; i<=5; i++)
+        {
+            for(int j = i; j>=1; j--)
+            {
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void pattern2 ()
+    {
+        System.out.println("Pattern 2:\n");
+        for (int i = 1; i<=5; i++)
+        {
+            for(int j = i; j<=5; j++)
+            {
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void pattern3 ()
+    {
+        System.out.println("Pattern 3:\n");
+        for (int i = 1; i<=5; i++)
+        {
+            for(int j = i; j<=5; j++)
+            {
+                System.out.print("  ");
+                if (j==5)
+                {
+                    for (int k = i; k>=1; k--)
+                    {
+                        System.out.print(" *");
+                    }
+                    System.out.println("");
+                }
+            }
+        }
     }
 }
