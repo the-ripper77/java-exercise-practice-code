@@ -5,7 +5,6 @@ class arrayUtility {
         Scanner scanner =new Scanner(System.in);
         System.out.print("Enter number of element: ");
         int size = scanner.nextInt();
-        scanner.close();
         int [] number = new int[size];
         int i = 0;
         while(i<size){
