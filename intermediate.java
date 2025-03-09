@@ -4,119 +4,122 @@ class javaArray{
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        // System.out.println("Welcome to Array");
+        System.out.println("Welcome to Array");
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Find the Sum and Average Number in an Array");
-        // int [] numArray = arrayUtility.inputArray();
-        // long sum = sum(numArray);
-        // System.out.println("The sum of the numbers is: "+sum);
-        // double avg = average(numArray);
-        // System.out.println("The average of the numbers is:" +avg);
+        System.out.println("# Find the Sum and Average Number in an Array");
+        int [] numArray = arrayUtility.inputArray();
+        long sum = sum(numArray);
+        System.out.println("The sum of the numbers is: "+sum);
+        double avg = average(numArray);
+        System.out.println("The average of the numbers is:" +avg);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Find the Occurrences of Number in an Array");
-        // int [] numArrayOccur = arrayUtility.inputArray();
-        // System.out.print("Now enter the number you want to find: ");
-        // int num = input.nextInt();
-        // int occur = occurrences(numArrayOccur, num);
-        // System.out.println("Your element was found " + occur +" times in the array.");
+        System.out.println("# Find the Occurrences of Number in an Array");
+        int [] numArrayOccur = arrayUtility.inputArray();
+        System.out.print("Now enter the number you want to find: ");
+        int num = input.nextInt();
+        int occur = occurrences(numArrayOccur, num);
+        System.out.println("Your element was found " + occur +" times in the array.");
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Find the Maximum and Minimum Number in Array");
-        // int [] mumArray= arrayUtility.inputArray();
-        // int max = maximumNumber(mumArray);
-        // System.out.println("Maximum Number of an Array is " + max);
-        // int min =  minimumNumber(mumArray);
-        // System.out.println("Minimum Number of an Array is " + min);
+        System.out.println("# Find the Maximum and Minimum Number in Array");
+        int [] mumArray= arrayUtility.inputArray();
+        int max = maximumNumber(mumArray);
+        System.out.println("Maximum Number of an Array is " + max);
+        int min =  minimumNumber(mumArray);
+        System.out.println("Minimum Number of an Array is " + min);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Find if the Array is Sorted or Not");
-        // int [] ifSortArray = arrayUtility.inputArray();
-        // boolean ifInc = isIncreasingOrder(ifSortArray);
-        // boolean ifDec = isDecreasingOrder(ifSortArray);
-        // if(ifInc || ifDec){
-        //     System.out.println("The given Array is Sorted");
-        // }
-        // else{
-        //     System.out.println("The given Array is not Sorted");
-        // }
+        System.out.println("# Find if the Array is Sorted or Not");
+        int [] ifSortArray = arrayUtility.inputArray();
+        boolean ifInc = isIncreasingOrder(ifSortArray);
+        boolean ifDec = isDecreasingOrder(ifSortArray);
+        if(ifInc || ifDec){
+            System.out.println("The given Array is Sorted");
+        }
+        else{
+            System.out.println("The given Array is not Sorted");
+        }
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Delete the Number From an Array");
-        // int [] wholeArray = arrayUtility.inputArray();
-        // System.out.print("Now Enter the number you want to delete: ");
-        // int delete = input.nextInt();
-        // System.out.println("Here is you New Array");
-        // int del = deleteTheArray(wholeArray, delete);
+        System.out.println("# Delete the Number From an Array");
+        int [] wholeArray = arrayUtility.inputArray();
+        System.out.print("Now Enter the number you want to delete: ");
+        int delete = input.nextInt();
+        System.out.println("Here is you New Array");
+        int del = deleteTheArray(wholeArray, delete);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Reverse an Array");
-        // int [] initialArray = arrayUtility.inputArray();
-        // System.out.println("Here is your Reverse Array");
-        // int reverseArray = reverseArray(initialArray);
+        System.out.println("# Reverse an Array");
+        int [] initialArray = arrayUtility.inputArray();
+        System.out.println("Here is your Reverse Array");
+        int reverseArray = reverseArray(initialArray);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Find if your Array is Pallindrom");
-        // int [] inpuArray = arrayUtility.inputArray();
-        // boolean palin = ifPalindrome(inpuArray);
-        // if (palin){
-        //     System.out.println("Your number is Pallindrom");
-        // }
-        // else{
-        //     System.out.println("Your number is not Pallindrom");
-        // }
+        System.out.println("# Find if your Array is Pallindrom");
+        int [] inpuArray = arrayUtility.inputArray();
+        boolean palin = ifPalindrome(inpuArray);
+        if (palin){
+            System.out.println("Your number is Pallindrom");
+        }
+        else{
+            System.out.println("Your number is not Pallindrom");
+        }
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Merge the Two Sorted Array");
-        // int [] arr1 = arrayUtility.inputArray();
-        // int [] arr2 = arrayUtility.inputArray();
-        // System.out.print("First Array: ");
-        // arrayUtility.displayArray(arr1);
-        // System.out.print("Second Array: ");
-        // arrayUtility.displayArray(arr2);
-        // System.out.println("Here is you merge sorted array");
-        // int merge = mergeArray(arr1, arr2);
+        System.out.println("# Merge the Two Sorted Array");
+        int [] arr1 = arrayUtility.inputArray();
+        int [] arr2 = arrayUtility.inputArray();
+        System.out.print("First Array: ");
+        arrayUtility.displayArray(arr1);
+        System.out.print("Second Array: ");
+        arrayUtility.displayArray(arr2);
+        System.out.println("Here is you merge sorted array");
+        int merge = mergeArray(arr1, arr2);
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Search an Element in a 2D-Array");
-        // int [][] input2D = arrayUtility.input2DArray();
-        // System.out.print("Now input the number you want to search: ");
-        // int searchNum = input.nextInt();
-        // boolean isFound = searchIn2D(input2D,searchNum);
-        // arrayUtility.dispaly2DArray(input2D);
-        // if(isFound){
-        //     System.out.println("Your number was found");
-        // }
-        // else{
-        //     System.out.println("Your number was not found");
-        // }
+        System.out.println("# Search an Element in a 2D-Array");
+        int [][] input2D = arrayUtility.input2DArray();
+        System.out.print("Now input the number you want to search: ");
+        int searchNum = input.nextInt();
+        boolean isFound = searchIn2D(input2D,searchNum);
+        arrayUtility.dispaly2DArray(input2D);
+        if(isFound){
+            System.out.println("Your number was found");
+        }
+        else{
+            System.out.println("Your number was not found");
+        }
 
-        // System.out.println();
+        System.out.println();
 
-        // System.out.println("# Find the Sum and Average Number of All Element in 2D-Array");
-        // int [][] insert2DArray = arrayUtility.input2DArray();
-        // arrayUtility.dispaly2DArray(insert2DArray);
-        // long totalSum = addingSum(insert2DArray);
-        // System.out.println("The sum of the numbers is " + totalSum);
-        // double totalAvg = sumAverage(insert2DArray);
-        // System.out.println("The Average of the numbers is " + totalAvg);
+        System.out.println("# Find the Sum and Average Number of All Element in 2D-Array");
+        int [][] insert2DArray = arrayUtility.input2DArray();
+        arrayUtility.dispaly2DArray(insert2DArray);
+        long totalSum = addingSum(insert2DArray);
+        System.out.println("The sum of the numbers is " + totalSum);
+        double totalAvg = sumAverage(insert2DArray);
+        System.out.println("The Average of the numbers is " + totalAvg);
 
-        // System.out.println();
+        System.out.println();
 
         System.out.println("# Find the Sum of Two Diagonal Elements");
         int [][] enter2DArray = arrayUtility.input2DArray();
         long diagonalSum = sumOfDiagonal(enter2DArray);
         System.out.println("The sum of two diagonal elements are: " + diagonalSum);
+
+        System.out.println();
+        
         input.close();
     }
     public static long sum(int[] numArray){
